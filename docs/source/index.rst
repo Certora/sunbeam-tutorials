@@ -17,14 +17,10 @@ smart contracts.
 
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Exercises:
+   :maxdepth: 2
+   :caption: Projects:
 
-   warmup.rst
-   balance_property.rst
-   transfer_rules.rst
-   mint_burn.rst
-   mutations.rst
+   token/index.rst
 
 ----
 

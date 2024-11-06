@@ -10,7 +10,8 @@ to and from. Write another rule to encode the effect of ``transfer`` on some ``o
 address. 
 
 You can write these two properties in ``transfer_is_correct`` and
-``transfer_no_effect_on_other`` in :clink:`/src/certora/spec.rs`.
+``transfer_no_effect_on_other`` in
+:clink:`src/certora/spec.rs <@token-proj/src/certora/spec.rs>`.
 
 Once you have written the rule, you can run Certora Sunbeam to check it by running:
 
@@ -18,17 +19,10 @@ Once you have written the rule, you can run Certora Sunbeam to check it by runni
 
    certoraRun confs/exercise2.conf
 
-----
+.. dropdown:: Solution
 
-3. ``transfer`` under insufficient funds
-========================================
-
-If ``from`` does not have sufficient balance, ``transfer`` of funds should not succeed.
-Write a rule to capture this behavior in the function ``transfer_fails_if_low_balance``.
-
-Once you have written the rule, you can run Certora Sunbeam to check it by running:
-
-
-.. code-block:: bash
-
-   certoraRun confs/exercise3.conf
+   .. cvlinclude:: @token-proj/solutions/solution_specs.rs
+      :language: rust
+      :start-at: Exercise 2
+      :end-before: Exercise 3
+      :caption:
