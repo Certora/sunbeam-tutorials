@@ -84,7 +84,7 @@ rst_prolog = """
 
 
 # -- codelink_extension configuration ----------------------------------------
-code_path_override = "../../"
+code_path_override = "../../projects"
 link_to_github = True
 
 # Use path_remappings for convinient shortcuts to paths, for example:
@@ -94,6 +94,7 @@ link_to_github = True
 #     "@reward-streams-confs": "../../euler-reward-streams/certora/conf/",
 #     "@reward-streams-harness": "../../euler-reward-streams/certora/harness/",
 # }
+path_remappings = {"@token-proj": "../../projects/token/"}
 
 
 # -- Options for todo extension ----------------------------------------------

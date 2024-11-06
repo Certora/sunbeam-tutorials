@@ -28,7 +28,8 @@ You can see the *Source Files* on the report page.
 There is also a *Call Trace* that shows you what sequence of function calls led to this
 outcome. 
 
-:clink:`/src/certora/spec.rs` will show you the *sanity* rule we just ran.
+:clink:`src/certora/spec.rs <@token-proj/src/certora/spec.rs>` will show you the
+*sanity* rule we just ran.
 This rule simply calls :rust:`Token::balance()` and checks that the control reaches
 the :cvl:`satisfy` statement that follows.
 You can read more about :cvl:`satisfy`
@@ -36,7 +37,20 @@ You can read more about :cvl:`satisfy`
 
 .. important::
 
-   If you are not able to run certoraRun, see the Troubleshooting section in
+   If you are not able to run certoraRun, see the `Sunbeam Troubleshooting`_ section in
    the Documentation.
 
-.. todo:: Add link to trooubleshooting.
+.. dropdown:: Solution
+
+   .. cvlinclude:: @token-proj/solutions/solution_specs.rs
+      :language: rust
+      :start-at: Exercise 0
+      :end-before: Exercise 1
+      :caption:
+
+
+.. Links
+   =====
+
+.. _Sunbeam Troubleshooting:
+   https://docs.certora.com/en/latest/docs/sunbeam/troubleshooting.html
