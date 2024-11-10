@@ -1,3 +1,5 @@
+.. index:: mutation
+
 5. Assessing your specs through mutation testing
 ================================================
 
@@ -27,25 +29,21 @@ covered by the rule.
    The bug is that the value read when the :rust:`addr` key is not present in storage is
    :rust:`1` but it should be :rust:`0`.
 
-   .. code-block:: rust
-
-      pub fn read_balance(e: &Env, addr: &Address) -> i64 {
-          e.storage().persistent().get(&addr).unwrap_or(1)
-      }
+   .. cvlinclude:: @token-proj/src/certora/mutants/mutant1.rs
+      :language: rust
+      :start-at: pub fn read_balance
+      :end-before: fn write_balance
 
 .. dropdown:: Mutant 2. Solution
 
    The bug is that :rust:`transfer` calls :rust:`spend_balance` twice instead of
    calling it once followed by a :rust:`receive_balance`.
 
-   .. code-block:: rust
-
-      pub fn transfer(e: &Env, from: Address, to: Address, amount: i64) {
-          from.require_auth();
-          check_nonnegative_amount(amount);
-          spend_balance(&e, from.clone(), amount);
-          spend_balance(&e, to.clone(), amount);
-      }
+   .. cvlinclude:: @token-proj/src/certora/mutants/mutant2.rs
+      :language: rust
+      :start-at: pub fn transfer
+      :end-before: pub fn mint
+      :emphasize-lines: 4, 5
 
 .. dropdown:: Mutant 3. Solution
 
@@ -53,11 +51,8 @@ covered by the rule.
    :rust:`spend_balance(&e, from.clone(), amount + 1);`
    instead of :rust:`spend_balance(&e, from.clone(), amount);`.
 
-   .. code-block:: rust
-
-      pub fn transfer(e: &Env, from: Address, to: Address, amount: i64) {
-          from.require_auth();
-          check_nonnegative_amount(amount);
-          spend_balance(&e, from.clone(), amount + 1);
-          receive_balance(&e, to.clone(), amount);
-      }
+   .. cvlinclude:: @token-proj/src/certora/mutants/mutant3.rs
+      :language: rust
+      :start-at: pub fn transfer
+      :end-before: pub fn mint
+      :emphasize-lines: 4
