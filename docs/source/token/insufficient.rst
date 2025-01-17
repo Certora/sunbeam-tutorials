@@ -9,7 +9,7 @@ Once you have written the rule, you can run Certora Sunbeam to check it by runni
 
 .. code-block:: bash
 
-   certoraRun confs/exercise3.conf
+   certoraSorobanProver exercise3.conf
 
 .. dropdown:: Solution
 

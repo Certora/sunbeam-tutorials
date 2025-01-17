@@ -12,7 +12,9 @@ Once you have written the rule, you can run Certora Sunbeam to check it by runni
 
 .. code-block:: bash
 
-   certoraRun confs/exercise1.conf
+   certoraSorobanProver exercise1.conf
+
+from the `projects/token/confs` directory.
 
 .. dropdown:: Hint
 

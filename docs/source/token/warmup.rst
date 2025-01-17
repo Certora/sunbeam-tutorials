@@ -5,20 +5,19 @@ Let's make sure you are able to run Certora Sunbeam. Run the following:
 
 .. code-block:: bash
 
-   cd meridian2024-workshop
-   certoraRun confs/setup.conf
+   cd projects/token/confs
+   certoraSorobanProver setup.conf
 
 You should see an output like so:
 
 .. code-block:: bash
 
-   INFO: Executing build process...
-   Executing:  cargo build --target=wasm32-unknown-unknown --release  --features cvt
-   
+   INFO: Building from script ../certora_build.py
+
    Connecting to server...
-   
+
    Job submitted to server
-   
+
    Manage your jobs at https://prover.certora.com
    Follow your job and see verification results at <LINK>
 

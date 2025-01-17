@@ -17,7 +17,7 @@ Once you have written the rule, you can run Certora Sunbeam to check it by runni
 
 .. code-block:: bash
 
-   certoraRun confs/exercise2.conf
+   certoraSorobanProver.py exercise2.conf
 
 .. dropdown:: Solution
 
