@@ -17,7 +17,9 @@ Once you have written the rule, you can run Certora Sunbeam to check it by runni
 
 .. code-block:: bash
 
-   certoraSorobanProver.py exercise2.conf
+   certoraSorobanProver exercise2.conf
+
+from the :rust:`projects/token/confs` directory.
 
 .. dropdown:: Solution
 

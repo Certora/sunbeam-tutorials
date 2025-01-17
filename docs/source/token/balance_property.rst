@@ -14,7 +14,7 @@ Once you have written the rule, you can run Certora Sunbeam to check it by runni
 
    certoraSorobanProver exercise1.conf
 
-from the `projects/token/confs` directory.
+from the :rust:`projects/token/confs` directory.
 
 .. dropdown:: Hint
 
