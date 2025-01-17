@@ -51,3 +51,5 @@ docs/build/
 # Certora
 # -------
 .certora_internal/
+emv-*
+target/

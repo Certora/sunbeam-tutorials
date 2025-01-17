@@ -135,14 +135,44 @@ dependencies = [
 ]
 
 [[package]]
+name = "certora"
+version = "0.1.0"
+source = "git+https://github.com/Certora/solana-cvt.git?branch=dev-soroban#1efb04a09b97ae61dfbb93bd80cd7d2ab6ddfe25"
+dependencies = [
+ "stubs",
+]
+
+[[package]]
 name = "certora-meridian24-token"
 version = "0.0.0"
 dependencies = [
- "cvt",
- "cvt-soroban",
- "cvt-soroban-macros",
+ "certora",
+ "certora-soroban",
+ "certora-soroban-macros",
  "nondet",
  "soroban-sdk",
+]
+
+[[package]]
+name = "certora-soroban"
+version = "0.1.0"
+source = "git+https://github.com/Certora/solana-cvt.git?branch=dev-soroban#1efb04a09b97ae61dfbb93bd80cd7d2ab6ddfe25"
+dependencies = [
+ "soroban-sdk",
+]
+
+[[package]]
+name = "certora-soroban-macros"
+version = "0.1.0"
+source = "git+https://github.com/Certora/solana-cvt.git?branch=dev-soroban#1efb04a09b97ae61dfbb93bd80cd7d2ab6ddfe25"
+dependencies = [
+ "darling",
+ "proc-macro2",
+ "quote",
+ "soroban-sdk",
+ "soroban-sdk-macros",
+ "syn",
+ "uuid",
 ]
 
 [[package]]
@@ -253,36 +283,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
-]
-
-[[package]]
-name = "cvt"
-version = "0.1.0"
-source = "git+https://github.com/Certora/solana-cvt.git?branch=dev-soroban#3cadeb499cdd180cab2e200ad31cc7e602ebeee7"
-dependencies = [
- "stubs",
-]
-
-[[package]]
-name = "cvt-soroban"
-version = "0.1.0"
-source = "git+https://github.com/Certora/solana-cvt.git?branch=dev-soroban#3cadeb499cdd180cab2e200ad31cc7e602ebeee7"
-dependencies = [
- "soroban-sdk",
-]
-
-[[package]]
-name = "cvt-soroban-macros"
-version = "0.1.0"
-source = "git+https://github.com/Certora/solana-cvt.git?branch=dev-soroban#3cadeb499cdd180cab2e200ad31cc7e602ebeee7"
-dependencies = [
- "darling",
- "proc-macro2",
- "quote",
- "soroban-sdk",
- "soroban-sdk-macros",
- "syn",
- "uuid",
 ]
 
 [[package]]
@@ -686,9 +686,9 @@ dependencies = [
 [[package]]
 name = "nondet"
 version = "0.2.0"
-source = "git+https://github.com/Certora/solana-cvt.git?branch=dev-soroban#3cadeb499cdd180cab2e200ad31cc7e602ebeee7"
+source = "git+https://github.com/Certora/solana-cvt.git?branch=dev-soroban#1efb04a09b97ae61dfbb93bd80cd7d2ab6ddfe25"
 dependencies = [
- "cvt",
+ "certora",
  "soroban-sdk",
  "stubs",
 ]
@@ -1261,7 +1261,7 @@ checksum = "7da8b5736845d9f2fcb837ea5d9e2628564b3b043a70948a3f0b778838c5fb4f"
 [[package]]
 name = "stubs"
 version = "0.1.0"
-source = "git+https://github.com/Certora/solana-cvt.git?branch=dev-soroban#3cadeb499cdd180cab2e200ad31cc7e602ebeee7"
+source = "git+https://github.com/Certora/solana-cvt.git?branch=dev-soroban#1efb04a09b97ae61dfbb93bd80cd7d2ab6ddfe25"
 
 [[package]]
 name = "subtle"

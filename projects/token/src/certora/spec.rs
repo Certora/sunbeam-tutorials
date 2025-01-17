@@ -13,7 +13,7 @@ use certora_soroban::{certora_print_i64, CERTORA_calltrace_print_c_i64, is_auth}
 #[rule]
 fn sanity(e: Env, addr: Address) {
     let balance = Token::balance(&e, addr);
-    cvt::satisfy!(true);
+    satisfy!(true);
 }
 
 // Exercise 1
