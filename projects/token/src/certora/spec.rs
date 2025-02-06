@@ -1,18 +1,45 @@
-#![no_std]
 
-use certora_soroban_macros::{declare_rules, rule};
+use certora_soroban_macros::rule;
 use soroban_sdk::{Address, Env};
 
 use crate::Token;
 use certora::*;
 use certora_soroban::{certora_print_i64, CERTORA_calltrace_print_c_i64, is_auth};
 
+#[rule]
+fn cvlr_rule1(_e: Env, _addr: Address) {
+    use cvlr_asserts::*;
+
+    cvlr_assert!(false);
+}
+
+#[rule]
+fn cvlr_rule2(_e: Env, _addr: Address) {
+    use cvlr_asserts::*;
+
+    cvlr_satisfy!(false);
+}
+
+#[rule]
+fn cvlr_rule3(_e: Env, _addr: Address) {
+    use cvlr_asserts::*;
+
+    let x: u64 = cvlr_nondet::nondet();
+    let y: u64 = cvlr_nondet::nondet();
+
+    cvlr_assume!(x > y);
+    cvlr_assert!(x <= y);
+}
+
+
+
+
 // Sunbeam specs
 
 // Exercise 0
 #[rule]
 fn sanity(e: Env, addr: Address) {
-    let balance = Token::balance(&e, addr);
+    let _balance = Token::balance(&e, addr);
     // Reachability check: is this satisfy reachable?
     certora::satisfy!(true);
 }

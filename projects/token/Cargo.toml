@@ -16,6 +16,12 @@ certora = {git = "https://github.com/Certora/solana-cvt.git", branch="dev-soroba
 certora-soroban = {git = "https://github.com/Certora/solana-cvt.git", branch="dev-soroban", default-features=false}
 certora-soroban-macros = {git = "https://github.com/Certora/solana-cvt.git", branch="dev-soroban", default-features=false}
 
+
+cvlr-asserts = { git = "https://github.com/1arie1/cvlr.git" }
+cvlr-nondet = { git = "https://github.com/1arie1/cvlr.git", default-features = false, features = [] }
+#cvlr-asserts = { path = "../../../../crates/cvlr/cvlr-asserts/" }
+#cvlr-nondet = { path = "../../../../crates/cvlr/cvlr-nondet/", default-features = false, features = [] }
+
 [features]
 certora = []
 

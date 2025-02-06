@@ -1,0 +1,10 @@
+{
+    "rust-analyzer.cargo.features": [
+        "certora"
+    ],
+    "rust-analyzer.cfg.setTest": false,
+    "rust-analyzer.cargo.allTargets": false,
+    "cSpell.words": [
+        "soroban"
+    ]
+}
