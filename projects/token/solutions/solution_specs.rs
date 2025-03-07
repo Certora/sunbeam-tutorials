@@ -3,10 +3,10 @@ use soroban_sdk::{Address, Env};
 
 use crate::Token;
 
+use cvlr::clog;
+use cvlr_soroban::is_auth;
 use cvlr_soroban_derive::rule;
 use cvlr::asserts::{cvlr_assert, cvlr_assume, cvlr_satisfy};
-
-use certora_soroban::{certora_print_i64, CERTORA_calltrace_print_c_i64, is_auth};
 
 
 // Sunbeam specs
@@ -26,7 +26,7 @@ fn init_balance(e: Env, addr: Address) {
     cvlr_assume!(!e.storage().persistent().has(&addr));
     let balance = Token::balance(&e, addr);
     // use this macro to see additional information in the calltrace
-    certora_print_i64!("value of balance is:", balance); 
+    clog!(balance);
     // postcondition macro
     cvlr_assert!(balance == 0);
 }

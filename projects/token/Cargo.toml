@@ -9,22 +9,21 @@ publish = false
 crate-type = ["cdylib"]
 
 [dependencies]
-soroban-sdk = { version = "21.6.0" }
+soroban-sdk = { version = "22.0.7" }
+
 
 cvlr = {git = "https://github.com/Certora/cvlr.git",  default-features=false}
+
 cvlr-soroban = {git = "https://github.com/Certora/cvlr-soroban.git"}
 cvlr-soroban-derive = {git = "https://github.com/Certora/cvlr-soroban.git"}
 cvlr-soroban-macros = {git = "https://github.com/Certora/cvlr-soroban.git"}
 
-certora = {git = "https://github.com/Certora/solana-cvt.git", branch="dev-soroban", default-features=false, features=[]}
-certora-soroban = {git = "https://github.com/Certora/solana-cvt.git", branch="dev-soroban", default-features=false}
-certora-soroban-macros = {git = "https://github.com/Certora/solana-cvt.git", branch="dev-soroban", default-features=false}
 
 [features]
 certora = []
 
 [dev-dependencies]
-soroban-sdk = { version = "21.6.0", features = ["testutils"] }
+soroban-sdk = { version = "22.0.7", features = ["testutils"] }
 
 [profile.release]
 opt-level = "z"
