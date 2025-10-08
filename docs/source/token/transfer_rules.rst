@@ -5,11 +5,11 @@ What should be the effect of a ``transfer`` of ``amount`` between two addresses,
 ``to`` and ``from``?
 Write a rule to capture the correct behavior. Whose balance should change by what amount?
 
-Note that ``transfer`` should not affect any address other than the one being transferred
-to and from. Write another rule to encode the effect of ``transfer`` on some ``other``
+Note that ``transfer`` should not affect any address other than the ones specified in the
+transfer. Write another rule to verify that ``transfer`` has no effect on some ``other``
 address. 
 
-You can write these two properties in ``transfer_is_correct`` and
+You can write these two properties in the existing rules ``transfer_is_correct`` and
 ``transfer_no_effect_on_other`` in
 :clink:`src/certora/spec.rs <@token-proj/src/certora/spec.rs>`.
 
