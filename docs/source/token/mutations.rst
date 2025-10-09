@@ -23,10 +23,11 @@ Can you detect what the mutation was, for each mutant?
 You can see the solution in :file:`solutions/bugs-in-mutants.md`.
 
 
-Note that there are other ways to assess the quality of your rule.
-You can mutate the rule to see if it is vacuous, you can check if the rule is a
-tautology, and you can use UNSAT cores to understand what parts of the code were
-covered by the rule.
+.. todo:: The following text needs more explanation / links:
+  Note that there are other ways to assess the quality of your rule.
+  You can mutate the rule to see if it is vacuous, you can check if the rule is a
+  tautology, and you can use UNSAT cores to understand what parts of the code were
+  covered by the rule.
 
 .. dropdown:: Mutant 1. Solution
 
