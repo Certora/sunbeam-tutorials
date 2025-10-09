@@ -1,6 +1,12 @@
 Introduction
 ============
 
+This tutorial builds upon concepts covered in the main Certora Prover Tutorials such 
+as propositional & predicate logic, and the basics of formal verification. If these 
+are not already familiar to you, refer to `section 1 of the Certora Prover Tutorials`_ 
+before proceeding.
+
+
 What is Certora Sunbeam?
 ------------------------
 Sunbeam is a tool for formally verifying Soroban smart contracts written in Rust. You can 
@@ -29,5 +35,7 @@ You can consult it if you want to know the answers.
 .. Links
    =====
 
+.. _section 1 of the Certora Prover Tutorials:
+   https://docs.certora.com/projects/tutorials/en/latest/lesson1_prerequisites/index.html
 .. _User Guide for Sunbeam:
    https://docs.certora.com/en/latest/docs/sunbeam/usage.html#user-guide-for-sunbeam
