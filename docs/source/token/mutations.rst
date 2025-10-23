@@ -5,9 +5,9 @@
 
 How do you know if your rules are good enough to catch potential bugs?
 One technique for assessing the quality of a specification is called "mutation testing".
-Small modifications (mutations) are intetionally made, one
+Small modifications (mutations) are intentionally made, one
 at a time, in the contract source code to cause logic faults. The modified code is checked 
-using your existing rules. It is important that your rules are passing with the original 
+using your existing rules. It is important that your rules pass with the original 
 contract code before applying any mutations so that you can safely draw conclusions from
 the mutation tests. With a mutation in the code, verification 
 will fail if the coverage of your rule set is good enough to catch the fault. If 
@@ -26,7 +26,7 @@ You can see the solution in :file:`solutions/bugs-in-mutants.md`.
 .. todo:: The following text needs more explanation / links:
   Note that there are other ways to assess the quality of your rule.
   You can mutate the rule to see if it is vacuous, you can check if the rule is a
-  tautology, and you can use UNSAT cores to understand what parts of the code were
+  tautology, and you can use ``UNSAT`` cores to understand what parts of the code were
   covered by the rule.
 
 .. dropdown:: Mutant 1. Solution

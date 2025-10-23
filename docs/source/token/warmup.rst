@@ -27,7 +27,7 @@ by a green check mark next to "sanity" in the Rules list.
 You can see the set of *Source Files* that were used by clicking on the
 File Tree icon to the left of the Rules list.
 Now, click on the "satisfy" rule to display related information in the *Call Trace* 
-panel that shows you the startng state and sequence of function calls that led to this outcome.
+panel that shows you the starting state and sequence of function calls that led to this outcome.
 
 .. index:: satisfy
 
