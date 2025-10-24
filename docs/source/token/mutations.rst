@@ -22,12 +22,9 @@ Then run the rules you wrote above for ``transfer`` on these mutants. Are they c
 Can you detect what the mutation was, for each mutant?
 You can see the solution in :file:`solutions/bugs-in-mutants.md`.
 
-
-.. todo:: The following text needs more explanation / links:
-  Note that there are other ways to assess the quality of your rule.
-  You can mutate the rule to see if it is vacuous, you can check if the rule is a
-  tautology, and you can use ``UNSAT`` cores to understand what parts of the code were
-  covered by the rule.
+Note that there are other ways to assess the quality of your rule.
+You can mutate the rule to see if it is `vacuous`_, and you can check if the rule is a
+`tautology`_.
 
 .. dropdown:: Mutant 1. Solution
 
@@ -61,3 +58,10 @@ You can see the solution in :file:`solutions/bugs-in-mutants.md`.
       :start-at: pub fn transfer
       :end-before: pub fn mint
       :emphasize-lines: 4
+
+.. Links
+   =====
+.. _vacuous:
+   https://docs.certora.com/en/latest/docs/prover/checking/sanity.html#vacuity-checks
+.. _tautology:
+   https://docs.certora.com/en/latest/docs/prover/checking/sanity.html#assert-tautology-checks
