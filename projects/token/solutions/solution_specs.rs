@@ -35,8 +35,6 @@ fn init_balance(e: Env, addr: Address) {
 // Exercise 2
 #[rule]
 fn transfer_is_correct(e: Env, to: Address, from: Address, amount: i64) {
-    cvlr_assume!(
-        e.storage().persistent().has(&from) && e.storage().persistent().has(&to) && to != from);
     let balance_from_before = Token::balance(&e, from.clone());
     let balance_to_before = Token::balance(&e, to.clone());
     Token::transfer(&e, from.clone(), to.clone(), amount);
@@ -61,13 +59,9 @@ fn transfer_no_effect_on_other(e: Env, amount: i64, from: Address, to: Address, 
 // Exercise 3
 #[rule]
 fn transfer_fails_if_low_balance(e: Env, to: Address, from: Address, amount: i64) {
-    cvlr_assume!(
-        e.storage().persistent().has(&from)
-            && e.storage().persistent().has(&to)
-            && to != from
-            && Token::balance(&e, from.clone()) < amount);
+    cvlr_assume!(Token::balance(&e, from.clone()) < amount);
     Token::transfer(&e, from.clone(), to.clone(), amount);
-    // should not reach and therefore rule must pass
+    // Should not reach the next line due to expected revert in transfer(). Rule fails iff it can be reached.
     cvlr_assert!(false);
 }
 
